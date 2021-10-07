@@ -29,6 +29,9 @@ from kedro.pipeline import Pipeline, node
 
 from .nodes import evaluate_model, split_data, train_model
 
+#Aditya change
+from .nodes import evaluate_model_RF , train_model_RF
+
 
 def create_pipeline(**kwargs):
     return Pipeline(
@@ -50,6 +53,19 @@ def create_pipeline(**kwargs):
                 inputs=["regressor", "X_test", "y_test"],
                 outputs=None,
                 name="evaluate_model_node",
+            ),
+#Aditya change
+            node(
+                func=train_model_RF,
+                inputs=["X_train", "y_train"],
+                outputs="RF_regressor",
+                name="train_model_RF_node",
+            ),
+            node(
+                func=evaluate_model_RF,
+                inputs=["RF_regressor", "X_test", "y_test"],
+                outputs=None,
+                name="evaluate_model_RF_node",
             ),
         ]
     )
