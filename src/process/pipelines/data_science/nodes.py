@@ -101,16 +101,16 @@ def train_model_RF(X_train: pd.DataFrame, y_train: pd.Series) -> RandomForestReg
 
 
 def evaluate_model_RF(
-    regressor: RandomForestRegressor, X_test: pd.DataFrame, y_test: pd.Series
+    RF_regressor: RandomForestRegressor, X_test: pd.DataFrame, y_test: pd.Series
 ):
     """Calculates and logs the coefficient of determination.
 
     Args:
-        regressor: Trained model.
+        RFregressor: Trained model.
         X_test: Testing data of independent features.
         y_test: Testing data for price.
     """
-    y_pred = regressor.predict(X_test)
+    y_pred = RF_regressor.predict(X_test)
     score = r2_score(y_test, y_pred)
     logger = logging.getLogger(__name__)
     logger.info("RandomForest Model has a coefficient R^2 of %.3f on test data.", score)

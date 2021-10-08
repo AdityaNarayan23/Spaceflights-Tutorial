@@ -78,3 +78,10 @@ regressor:
   filepath: data/06_models/regressor.pickle
   versioned: true
   layer: models
+
+RF_regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/RF_regressor.pickle
+  versioned: true
+  layer: models
+
