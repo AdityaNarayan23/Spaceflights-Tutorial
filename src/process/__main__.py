@@ -36,9 +36,13 @@ from .cli import run
 
 
 def main():
+    print("Hello! ------------ Inside src/process/__main__.py/main_before")
     configure_project(Path(__file__).parent.name)
     run()
+    print("Hello! ------------ Inside src/process/__main__.py/main_after")
 
 
 if __name__ == "__main__":
+    print("Hello! ------------ Inside src/process/__main__.py/if_before")
     main()
+    print("Hello! ------------ Inside src/process/__main__.py/if_after")

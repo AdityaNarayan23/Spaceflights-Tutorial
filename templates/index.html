@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>SpaceFlights Price Prediction API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>SpaceFlights Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <!--<form action="/predict"method="post"> -->
+    <form action="/predict">  
+    	<input type="number" name="engines" placeholder="Number of Engines?" required="required" />
+      <input type="number" name="passenger_capacity" placeholder="Passenger Capacity?" required="required" />
+      <input type="number" name="crew" placeholder="Number of Crew Members?" required="required" />
+      <input type="text" name="d_check_complete" placeholder="D Check Complete?" required="required" />
+      <input type="text" name="moon_clearance_complete" placeholder="Moon Clearance Complete?" required="required" />
+      <input type="text" name="iata_approved" placeholder="IATA Approved?" required="required" />
+      <input type="number" name="company_rating" placeholder="Company Rating?" required="required" />
+      <input type="number" name="review_scores_rating" placeholder="Review Scores Rating?" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>

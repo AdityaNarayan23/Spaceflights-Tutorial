@@ -51,6 +51,9 @@ def split_data(data: pd.DataFrame, parameters: Dict) -> Tuple:
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=parameters["test_size"], random_state=parameters["random_state"]
     )
+    print("Training Shape ---------:", X_train.shape, y_train.shape)
+    print("Testing Shape ---------:", X_test.shape, y_test.shape)
+    print("X Test Type ------------:", type(X_test))
     return X_train, X_test, y_train, y_test
 
 

@@ -31,7 +31,7 @@ from setuptools import find_packages, setup
 entry_point = (
     "spaceflightsRepo = process.__main__:main"
 )
-
+print("Hello! ------------ Inside src/setup.py")
 
 # get the dependencies and installs
 with open("requirements.txt", "r", encoding="utf-8") as f:
